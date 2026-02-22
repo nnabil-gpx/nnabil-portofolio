@@ -1,0 +1,169 @@
+/* VARIABEL WARNA & UKURAN - TEMA BIRU MUDA */
+:root {
+    --primary-blue: #0077b6; /* Biru cerah utama */
+    --light-blue: #ade8f4;   /* Biru muda untuk aksen halus */
+    --accent-blue: #00b4d8;  /* Biru langit untuk hover */
+    --text-main: #2c3e50;    /* Warna teks gelap agar mudah dibaca */
+    --card-white: #ffffff;
+    --radius-lg: 12px;
+    --transition: 0.3s ease;
+}
+
+/* RESET DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f9ff; /* Background halaman biru sangat muda */
+    color: var(--text-main);
+    overflow-x: hidden; 
+}
+
+/* HEADER & NAV */
+header {
+    /* Gradient menggunakan kombinasi biru muda ke biru cerah */
+    background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: var(--primary-blue);
+    padding: 12px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--light-blue);
+}
+
+/* SECTION UMUM */
+section {
+    padding: 30px 15px;
+    max-width: 900px;
+    margin: 15px auto;
+    background: var(--card-white);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 95%; 
+}
+
+section h2 {
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--accent-blue);
+    display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+/* PROYEK (GRID RESPONSIVE) */
+.project {
+    border: 1px solid #e1eff6;
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    background: #fff;
+    transition: var(--transition);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 180, 216, 0.15);
+    border-color: var(--accent-blue);
+}
+
+.project img {
+    border-radius: 8px;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.project h3 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+/* KONTAK */
+#contact {
+    background-color: var(--card-white);
+    padding: 25px;
+    border-radius: var(--radius-lg);
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.contact-item a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+    word-break: break-all;
+}
+
+.contact-item i {
+    font-size: 24px;
+    width: 40px;
+    color: var(--primary-blue);
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--accent-blue);
+}
+
+.contact-item a:hover i {
+    transform: scale(1.2);
+    color: var(--accent-blue);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: var(--primary-blue);
+    color: white;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE UNTUK LAYAR BESAR (TABLET/PC) */
+@media (min-width: 768px) {
+    header h1 { font-size: 2.5rem; }
+    nav a { margin: 0 15px; font-size: 1rem; }
+    section { width: 90%; padding: 40px; }
+}
